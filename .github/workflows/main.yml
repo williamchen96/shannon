@@ -1,0 +1,14 @@
+name: Example workflow for Python using AQtive Guard AI-SPM Inventory Scan by SandboxAQ
+on: push
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@master
+      - name: Run AI-SPM Inventory detection
+        uses: sandbox-quantum/aispm-inventory-action@main
+        with:
+          aqg_instance: https://ey.aqtiveguard.com
+          aqg_client_id: aq-d9a3c49fba13b99f02de8130c1534838e91b1953
+          aqg_client_secret: dce746d584d9bb24e218f7fab9f0d3a1507446c5883e8a9330b2130475a96898
